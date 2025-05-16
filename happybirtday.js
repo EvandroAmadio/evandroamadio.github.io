@@ -1,16 +1,19 @@
+// Ajuste inicial da tela e canvas
 let w = (c.width = window.innerWidth),
   h = (c.height = window.innerHeight),
   ctx = c.getContext("2d"),
-  hw = w / 2;
-(hh = h / 2),
-  function getQueryParam(param) {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(param);
-  }
+  hw = w / 2,
+  hh = h / 2;
+
+// Função para capturar nome da URL
+function getQueryParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+}
 const nome = getQueryParam("nome") || "to You";
 
-(opts = {
-  // change the text in here //
+// Opções de configuração do efeito
+const opts = {
   strings: ["HAPPY", "BIRTHDAY!", nome],
   charSize: 30,
   charSpacing: 35,
@@ -50,15 +53,17 @@ const nome = getQueryParam("nome") || "to You";
   balloonAddedVel: 0.4,
   balloonBaseRadian: -(Math.PI / 2 - 0.5),
   balloonAddedRadian: -1,
-}),
-  (calc = {
-    totalWidth:
-      opts.charSpacing *
-      Math.max(opts.strings[0].length, opts.strings[1].length),
-  }),
-  (Tau = Math.PI * 2),
-  (TauQuarter = Tau / 4),
-  (letters = []);
+};
+
+const calc = {
+  totalWidth:
+    opts.charSpacing *
+    Math.max(opts.strings[0].length, opts.strings[1].length),
+};
+
+const Tau = Math.PI * 2;
+const TauQuarter = Tau / 4;
+const letters = [];
 
 ctx.font = opts.charSize + "px Verdana";
 
