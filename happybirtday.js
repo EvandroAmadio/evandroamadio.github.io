@@ -1,18 +1,26 @@
 // Ajuste inicial da tela e canvas
 let w = (c.width = window.innerWidth),
-  h = (c.height = window.innerHeight),
-  ctx = c.getContext("2d"),
-  hw = w / 2,
-  hh = h / 2;
+    h = (c.height = window.innerHeight),
+    ctx = c.getContext("2d"),
+    hw = w / 2,
+    hh = h / 2;
 
-// Função para capturar nome da URL
+// Função para capturar o parâmetro "nome" da URL
 function getQueryParam(param) {
   const urlParams = new URLSearchParams(window.location.search);
   return urlParams.get(param);
 }
+
+// Captura o nome ou usa "to You" como padrão
 const nome = getQueryParam("nome") || "to You";
 
-// Opções de configuração do efeito
+// Remove o parâmetro da URL no navegador, mantendo o nome no código
+if (history.replaceState) {
+  const url = window.location.protocol + "//" + window.location.host + window.location.pathname;
+  history.replaceState({}, document.title, url);
+}
+
+// Agora as opções com o nome dinâmico
 const opts = {
   strings: ["HAPPY", "BIRTHDAY!", nome],
   charSize: 30,
