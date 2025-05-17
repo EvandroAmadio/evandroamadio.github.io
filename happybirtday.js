@@ -15,10 +15,12 @@ function getQueryParam(param) {
 const nome = getQueryParam("nome") || "to You";
 
 // Remove o parâmetro da URL no navegador, mantendo o nome no código
-if (history.replaceState) {
-  const url = window.location.protocol + "//" + window.location.host + window.location.pathname;
-  history.replaceState({}, document.title, url);
-}
+window.addEventListener("DOMContentLoaded", () => {
+  if (history.replaceState) {
+    const url = window.location.protocol + "//" + window.location.host + window.location.pathname;
+    history.replaceState({}, document.title, url);
+  }
+});
 
 // Agora as opções com o nome dinâmico
 const opts = {
