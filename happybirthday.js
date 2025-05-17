@@ -12,7 +12,7 @@ const opts = {
   strings: ["HAPPY", "BIRTHDAY!", "to " + nome + "!", "🎂🎈🥳"],
   charSize: 30,
   charSpacing: 35,
-  lineHeight: 40,
+  lineHeight: 50,
 
   cx: window.innerWidth / 2,
   cy: window.innerHeight / 2,
@@ -65,7 +65,7 @@ let w = (c.width = window.innerWidth),
   TauQuarter = Tau / 4,
   letters = [];
 
-ctx.font = opts.charSize + "px Verdana";
+ctx.font = opts.charSize + "px Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif";
 
 function Letter(char, x, y) {
   this.char = char;
