@@ -1,4 +1,6 @@
 window.addEventListener("DOMContentLoaded", () => {
+  const c = document.getElementById('c');  // Definir o canvas corretamente
+
   let w = (c.width = window.innerWidth),
       h = (c.height = window.innerHeight),
       ctx = c.getContext("2d"),
@@ -16,6 +18,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const url = window.location.protocol + "//" + window.location.host + window.location.pathname;
     history.replaceState({}, document.title, url);
   }
+
   const opts = {
     strings: ["HAPPY", "BIRTHDAY!", nome],
     charSize: 30,
@@ -67,6 +70,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const letters = [];
 
   ctx.font = opts.charSize + "px Verdana";
+
 
 
   function Letter(char, x, y) {
