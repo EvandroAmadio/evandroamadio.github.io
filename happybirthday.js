@@ -9,7 +9,7 @@ const nome = getQueryParam("nome") || "You";
 
 // 👉 Configurações
 const opts = {
-  strings: ["HAPPY", "BIRTHDAY!", "to " + nome + "!"],
+  strings: ["🎉 HAPPY BIRTHDAY 🎉", nome + "!", "🎂🎈🥳"],
   charSize: 30,
   charSpacing: 35,
   lineHeight: 50,
@@ -65,7 +65,7 @@ let w = (c.width = window.innerWidth),
   TauQuarter = Tau / 4,
   letters = [];
 
-ctx.font = opts.charSize + "px Verdana";
+ctx.font = opts.charSize + "px Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif";
 
 function Letter(char, x, y) {
   this.char = char;
