@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
-  const c = document.getElementById('c');
+  const c = document.getElementById('c'); // Definido aqui!
 
   let w = (c.width = window.innerWidth),
       h = (c.height = window.innerHeight),
