@@ -9,7 +9,7 @@ const nome = getQueryParam("nome") || "You";
 
 // 👉 Configurações
 const opts = {
-  strings: ["HAPPY", "BIRTHDAY!", "to " + nome],
+  strings: ["HAPPY", "BIRTHDAY!", "to " + nome + "!", "🎂🎈🥳"],
   charSize: 30,
   charSpacing: 35,
   lineHeight: 40,
