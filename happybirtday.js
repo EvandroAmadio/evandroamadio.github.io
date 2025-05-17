@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
-  const c = document.getElementById('c');  // Definir o canvas corretamente
+  const c = document.getElementById('c');
 
   let w = (c.width = window.innerWidth),
       h = (c.height = window.innerHeight),
@@ -14,10 +14,13 @@ window.addEventListener("DOMContentLoaded", () => {
 
   const nome = getQueryParam("nome") || "to You";
 
+  setTimeout(() => {
   if (history.replaceState) {
     const url = window.location.protocol + "//" + window.location.host + window.location.pathname;
     history.replaceState({}, document.title, url);
   }
+}, 100);
+
 
   const opts = {
     strings: ["HAPPY", "BIRTHDAY!", nome],
