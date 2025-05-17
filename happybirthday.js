@@ -10,14 +10,13 @@ const nome = getQueryParam("nome") || "You";
 // 👉 Configurações
 const opts = {
   strings: [
-  "FELIZ", "ANIVERSÁRIO!", 
-    
-  + nome,
-    
+  "FELIZ",
+  "ANIVERSÁRIO!",
+  "" + nome,
   "Muitos anos de vida,",
   "saúde, felicidades",
   "e muito sucesso!"
-  ],
+],
   charSize: 30,
   charSpacing: 35,
   lineHeight: 50,
