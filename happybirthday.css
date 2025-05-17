@@ -25,3 +25,7 @@ p > a:first-of-type {
 body {
   overflow: hidden;
 }
+
+body, canvas {
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Twemoji Mozilla", sans-serif;
+}
