@@ -4,8 +4,15 @@ let w = (c.width = window.innerWidth),
   hw = w / 2;
 (hh = h / 2),
   (opts = {
-    // change the text in here //
-    strings: ["HAPPY", "BIRTHDAY!", "to You"],
+    function getQueryParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+}
+
+const nome = getQueryParam("nome") || "You"; // fallback para "You"
+
+const opts = {
+  strings: ["HAPPY", "BIRTHDAY!", "to " + nome],
     charSize: 30,
     charSpacing: 35,
     lineHeight: 40,
