@@ -19,7 +19,7 @@ const opts = {
   "e muito sucesso!"
   "",
   "Melhoria Contínua CSC"
-],
+  ],
   charSize: 30,
   charSpacing: 35,
   lineHeight: 50,
