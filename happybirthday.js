@@ -17,8 +17,6 @@ const opts = {
   "Muitos anos de vida,",
   "saúde, felicidades",
   "e muito sucesso!"
-  "",
-  "Melhoria Contínua CSC"
   ],
   charSize: 30,
   charSpacing: 35,
